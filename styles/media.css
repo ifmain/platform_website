@@ -1,0 +1,141 @@
+@media (min-width: 769px) and (max-width: 1023px) {
+    .h_textarea{ 
+	  width: 60%;
+	}
+
+    .dyn_w {
+        width: 60%;
+    }
+	
+	.search-textarea {
+		width: 60%;
+	}
+	
+	.hint-warn {
+		width:60vw;
+	}
+
+	.hint-info {
+		width:60vw;
+	}
+}
+
+
+
+
+/* Медиа-запрос для мобильных устройств и планшетов */
+
+@media (max-width: 768px) { 
+	.h_textarea{ 
+	  width: 100%;
+	  padding-left:10px;
+	  padding-right:10px;
+	}
+	
+	.hint-warn {
+		width: 90vw;
+		margin-left:5%;
+		margin-right:5%;
+	}
+
+	.hint-info {
+		width: 90vw;
+		margin-left:5%;
+		margin-right:5%;
+	}
+	
+	.search-textarea {
+		width: 100%;
+	}
+	
+	.dyn_w {
+	    width: 100%;
+	}
+	
+    .show-pc {
+        display: none;
+    }
+
+    .show-mob {
+        display: block; 
+    }
+	.topic {
+		font-size: 18px;
+		line-height: 40px;
+		color: #202123;
+		font-weight: 700;
+		padding-top:5px;
+		padding-bottom:5px;
+		padding-left:10px;
+	}
+
+	.answer {
+		font-size: 18px;
+		color: #202123;
+		padding-top:2px;
+		padding-bottom:30px;
+	}
+	
+	.user-block-icon {
+		margin-left:10px;
+		margin-top:-4px;
+	}
+	.cube {
+		width: 100%; /* или конкретное значение в пикселях */
+		height: 0;
+		position: relative;
+		overflow: hidden;
+		border-radius: 15px;
+		padding-top: 100%; /* сохраняем это для поддержания аспекта квадрата */
+	}
+
+	.cube::before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+
+	.cube img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 15px;
+	}
+	
+	
+	
+	/* Скролл бар */
+
+	::-webkit-scrollbar {
+		display: none; /* для браузеров на основе WebKit (Safari, Chrome) */
+	}
+
+	html {
+		scrollbar-width: none; /* Скрыть скроллбар в Firefox */
+	}
+
+	body {
+		-ms-overflow-style: none; /* Скрыть скроллбар в Internet Explorer и Edge */
+	}
+	
+	.lection-page-banner {
+		width:100%;
+	}
+	
+	.grid-container-4 {
+	  display: block;
+	  text-align: center;
+	}
+	
+	.grid-container-4 h1 {
+		display: block;
+	}
+	
+	.grid-container-4 img {
+		display: block;
+	}
+	
+}

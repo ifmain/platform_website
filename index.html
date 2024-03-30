@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="styles/styles.css" rel="stylesheet" >
+	<link href="styles/media.css" rel="stylesheet" >
+	
+	<link href="styles/bootstrap.min.css" rel="stylesheet">
+	<link href="styles/highlight.css" rel="stylesheet">
+	<link href="styles/platform.css" rel="stylesheet">
+	
+	<link href="styles/ibm_font.css" rel="stylesheet">
+	
+	<script src="scripts/core/script.js"></script>
+</head>
+<body class='no-select'>
+	<div class='full-page-block flex-row'>
+		<div class='left-toggle'>
+			<div class='text-center mt-4 logoAction logo-space'>
+				<div class="logo-auto d-inline-block">
+					<div class="icon-svg logo_main_platform filter-white inline"></div>
+					<div class='menu-list-auto inline logo_platform_text'>Sandbox</div>
+				</div>
+			</div>
+			<div id='menu-chose-mode'>
+				<div class='list-pl-elem  pl-elem-active'><i data-feather="user"></i><p>Assistants</p></div>
+				<div class='list-pl-elem'><i data-feather="type"></i><p>Text generation</p></div>
+				<div class='list-pl-elem'><i data-feather="layers"></i><p>Embeddings</p></div>
+				<div class='list-pl-elem'><i data-feather="image"></i><p>Image generation</p></div>
+				<div class='list-pl-elem'><i data-feather="volume-2"></i><p>Text to speech</p></div>
+				<div class='list-pl-elem'><i data-feather="mic"></i><p>Speech to text</p></div>
+				<div class='list-pl-elem'><i data-feather="shield"></i><p>Moderation</p></div>
+			</div>
+        </div>
+		
+		<div class='right-full'>
+			<div class='header-tab flex-row'>
+				<div class='w40'>
+					<p class='header-tap-header d-inline-block' id='label-tab'>Assistants</p>
+					<div class='d-inline-block select-new'>
+						<div class='content-block-text-generation' hidden>
+							<select class="selectpicker sp2" id='chose-text-generation-mode'>
+							  <option>Chat</option>
+							  <option>Assistants</option>
+							  <option>Completions</option>
+							</select>
+							<i class='select-icon' data-feather="code"></i>
+						</div>
+					</div>
+				</div>
+				<div>
+					<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'><i data-feather="plus"></i><p>Create</p></button>
+				</div>
+			</div>
+			
+			<div class='flex-row h100 white'>
+				<div class='left2-toggle content-block-assistants h100'>
+					
+					<div class='flex-row full-w'>
+						<div class='w100 assistant-block assistant-block-active'>
+							<h1 class='low_text7'>GPT</h1>
+							<div class='low_text8'>
+								<div class='flex'>asst_NuMB3R_b237KL</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class='flex-row full-w'>
+						<div class='w100 assistant-block'>
+							<h1 class='low_text7'>PC-Shop-Assistant</h1>
+							<div class='low_text8'>
+								<div class='flex'>asst_NuMB3R_0bweyf</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class='flex-row full-w'>
+						<div class='w100 assistant-block'>
+							<h1 class='low_text7'>Artist</h1>
+							<div class='low_text8'>
+								<div class='flex'>asst_NuMB3R_hy88tg</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<p class='low_text'></p>
+				</div>
+				
+				<div class='main-block content-block-assistants relative'>
+					<h2 class='low_text7'>ASSISTANT</h2>
+					<div class='flex-row full-w w100'>
+						<h1 class='low_text5 white'>asst_NuMB3R_b237KL</h1>
+						<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'><p>Try in text generation</p></button>
+					</div>
+					
+					<div class='tp bp flex'>
+						<h4 class='low_text7'>Name</h4>
+						<input class='form-control black-form'></input>
+					</div>
+					<div class='tp flex'>
+						<h4 class='low_text7'>Instructions</h4>
+						<textarea class='form-control black-form'></textarea>
+					</div>
+					<div class='tp flex'>
+						<div class='flex-row full-w w100 bp'>
+							<p class='low_text7'>Models</p>
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'>
+								<i data-feather="rotate-cw"></i>
+								<p>reload</p>
+							</button>
+						</div>
+						<select class="selectpicker sp2" id='chose-text-generation-mode'>
+							<option>OpenChat 0106 fp16</option>
+							<option>deepseek-coder-6.7b-instruct fp16</option>
+							<option>miqu-1-70b Q5_K_M</option>
+							<option>mistral-7b-instruct-v0.2 fp16</option>
+							
+						</select>
+					</div>
+					<div class='tp flex'>
+						<h4 class='low_text7'>TOOLS</h4>
+						<hr/>
+						<div class='flex-row full-w w100 list-elem-assistant-do'>
+							<p>Functions</p>
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'>
+								<i data-feather="plus"></i>
+								<p>Function</p>
+							</button>
+						</div>
+						<hr/>
+						
+						<div class='flex-row full-w w100 list-elem-assistant-do'>
+							<p>Code interpreter</p>
+							<input type="checkbox" checked data-toggle="toggle">
+						</div>
+						<hr/>
+						
+						<div class='flex-row full-w w100 list-elem-assistant-do'>
+							<p>Retrieval</p>
+							<input type="checkbox" checked data-toggle="toggle">
+						</div>
+						<hr/>
+						
+						<div class='flex-row full-w w100 list-elem-assistant-do'>
+							<p>FILES</p>
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'>
+								<i data-feather="paperclip"></i>
+								<p>Add</p>
+							</button>
+						</div>
+						<hr/>
+						<p class='low_text8'>Add files to use with code interpreter or retrieval.</p>
+					</div>
+					
+					<div class='to_bottom flex-row full-w w100'>
+						<div class='flex-row'>
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'>
+								<i data-feather="trash-2"></i>
+								<p>Remove</p>
+							</button>
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green" id='create-btn'>
+								<i data-feather="copy"></i>
+								<p>Clone</p>
+							</button>
+						</div>
+						<div class='low_text7'>
+							Updated 3/28, 2:57 PM
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="scripts/core/index.js"></script>
+	<script src="scripts/markdown/marked.min.js"></script>
+	<script src="scripts/markdown/highlight.js"></script>
+	<script src="scripts/icons/feather.min.js"></script>
+	
+	<script>
+		feather.replace();
+	</script>
+	
+</body>
+</html>

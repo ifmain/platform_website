@@ -1,0 +1,151 @@
+
+/* Search */
+
+.auth-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+	
+	width:100%;
+	max-height: 70vh;
+	min-height: 50vh;
+	overflow-y: auto;
+	
+	padding:10px;
+	
+	border: solid 2px #aaa;
+    border-radius: 10px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, auto));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.search-textarea {
+    height: 100px;
+    font-size: 24px;
+    resize: none;
+    border: solid 2px #aaa;
+    border-radius: 10px;
+	width: 35%;
+}
+
+.search-textarea:focus {
+  border-color: #000 !important;
+}
+
+
+
+.text-block {
+    border: solid 2px #aaa;
+    border-radius: 10px;
+    width: calc(100%); /* Устанавливаем ширину блока в половину контейнера с учетом отступов */
+    font-size: 14px;
+    min-height: 85px;
+    max-height: 85px;
+    line-height: calc(80px / 3); /* Вычисляем одну треть высоты строки */
+    display: -webkit-box;
+    padding-left: 5px;
+	padding-right:5px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#hint_1,
+#hint_3 {
+    padding-right: 5px; 
+}
+
+#hint_2,
+#hint_4 {
+    padding-left: 5px;
+}
+
+
+.static-20vh {
+    height: 20vh;
+}
+
+.hint-warn {
+	margin-top:60vh;
+	margin-left:10%;
+	margin-right:10%;
+	position:absolute;
+	height:20vh;
+	width:33.33vw;
+	overflow: hidden;
+}
+
+.hint-info {
+	top:0%;
+	margin-top:-30vh;
+	margin-left:10%;
+	margin-right:10%;
+	position:absolute;
+	height:20vh;
+	overflow: hidden;
+	width:33.33vw;
+}
+
+
+
+#long-hint {
+	width:100%;
+	opacity: 1;
+}
+ 
+
+
+.dyn_w {
+	width: 35%;
+	padding-left:10px;
+	padding-right:10px;
+}
+.search-textarea {
+	width: 35%;
+}
+
+.block-search {
+	border: solid 1.5px #aaa;
+    border-radius: 10px;
+	padding:10px 5px 3px 10px;
+	
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+
+
+.block-search-elem {
+	height:35px;
+}
+
+.block-search-icon {
+	height:22px;
+	width:22px;
+	margin:1px;
+}
+
+
+
+.action_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	margin-top:20px;
+	width:150px;
+}

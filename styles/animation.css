@@ -1,0 +1,102 @@
+@keyframes scan {
+  0% {
+    transform: translateY(-45%);
+  }
+  15% {
+    transform: translateY(-45%);
+  }
+  17% {
+    transform: translateY(-35%);
+  }
+  83% {
+    transform: translateY(35%);
+  }
+  85% {
+    transform: translateY(45%);
+  }
+  100% {
+    transform: translateY(45%);
+  }
+}
+
+.anim_scan {
+  animation: scan 4s cubic-bezier(1, 1, 1, 1) infinite;
+}
+
+@keyframes coffee {
+  0% {
+    transform: translateX(0%) rotate(0deg);
+  }
+  20% {
+    transform: translateX(0%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(25%) translateY(-50%) rotate(25deg);
+  }
+  80% {
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+}
+
+.anim_coffee {
+  animation: coffee 4s cubic-bezier(1, 1, 1, 1) infinite;
+}
+
+@keyframes down50 {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+.anim_down50 {
+	animation: down50 4s cubic-bezier(1, 1, 1, 1) infinite;
+}
+
+@keyframes down100 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.anim_down100 {
+	animation: down100 4s cubic-bezier(1, 1, 1, 1) infinite;
+}
+
+@keyframes down200 {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+.anim_down200 {
+	animation: down200 4s cubic-bezier(1, 1, 1, 1) infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.2s ease-in-out infinite;
+}
+
