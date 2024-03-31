@@ -18,3 +18,7 @@ This project is built using a combination of modern web technologies and open-so
 - [Google Fonts - IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans/about) - For beautiful typography.
 - [marked](https://github.com/markedjs/marked) - For Markdown parsing.
 - [Feather](https://github.com/feathericons/feather) - For lightweight and customizable icons.
+
+## Test website
+
+You can check design on [this page](https://ifmain.github.io/platform_website/)
