@@ -68,7 +68,7 @@ function choseTab(elem) {
 		break;
       
 	  case 'Speech to text':
-		choseVisible('content-block-image-speech-to-text')
+		choseVisible('content-block-speech-to-text')
 		document.getElementById('create-btn').hidden=true;
 		break;
       
