@@ -33,6 +33,12 @@
 				<div class='list-pl-elem'><i data-feather="mic"></i><p>Speech to text</p></div>
 				<div class='list-pl-elem'><i data-feather="shield"></i><p>Moderation</p></div>
 			</div>
+			<div class='to_bottom white'>
+				<div class='list-pl-elem' onclick="document.location='https://platform.openai.com/docs/overview'"><i data-feather="book"></i><p>Documentation</p></div>
+				<div class='list-pl-elem' onclick="document.location='https://github.com/ifmain/platform_website/issues'"><i data-feather="github"></i><p>Help</p></div>
+				<hr/>
+				<div class='list-pl-elem'><i data-feather="settings"></i><p>Settings</p></div>
+			</div>
         </div>
 		
 		<div class='right-full'>
@@ -104,7 +110,7 @@
 					</div>
 					<div class='tp flex'>
 						<h4 class='low_text7'>Instructions</h4>
-						<textarea class='form-control black-form'></textarea>
+						<textarea class='form-control black-form no-resize' rows="4"></textarea>
 					</div>
 					<div class='tp flex'>
 						<div class='flex-row full-w w100 bp'>
@@ -115,11 +121,10 @@
 							</button>
 						</div>
 						<select class="selectpicker sp2" id='chose-text-generation-mode'>
-							<option>OpenChat 0106 fp16</option>
-							<option>deepseek-coder-6.7b-instruct fp16</option>
-							<option>miqu-1-70b Q5_K_M</option>
-							<option>mistral-7b-instruct-v0.2 fp16</option>
-							
+							<option>OpenChat 0106 [7B | fp16]</option>
+							<option>deepseek-coder-6.7b-instruct [7B | fp16]</option>
+							<option>miqu-1-70b [70B | Q5_K_M]</option>
+							<option>mistral-7b-instruct-v0.2 [7B | fp16]</option>
 						</select>
 					</div>
 					<div class='tp flex'>
@@ -168,15 +173,159 @@
 								<p>Clone</p>
 							</button>
 						</div>
-						<div class='low_text7'>
-							Updated 3/28, 2:57 PM
+						
+					</div>
+				</div>
+				
+				<div class='main-block content-block-text-generation relative' hidden>
+					Text generation
+				</div>
+				
+				<div class='main-block content-block-embeddings relative' hidden>
+					<div class='flex-row full-w w100'>
+						<div class='w45'>
+							<h1 class='low_text5'>First text</h1>
+							<textarea class='form-control black-form no-resize' rows="12"></textarea>
+						</div>
+						<div class='w45'>
+							<h1 class='low_text5'>Second text</h1>
+							<textarea class='form-control black-form no-resize' rows="12"></textarea>
+						</div>
+					</div>
+					
+					
+					<div class='flex-row full-w w100 tp'>
+						<div class='d-inline-block w45'>
+							<h4 class='low_text7 tp'>Chose model:</h4>
+							<select class="selectpicker sp2 tp" id='chose-text-generation-mode'>
+								<option>text-embedding-3-small [API]</option>
+								<option>SFR-Embedding-Mistral [7B | FP16]</option>
+								<option>GritLM-7B [7B | FP16]</option>
+							</select>
+							
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green tp" id='create-btn'>
+								<i data-feather="layers"></i>
+								<p>Get similarity</p>
+							</button>
+						</div>
+						
+						<div class='d-inline-block w45'>
+							<h4 class='low_text7 tp'>Export As:</h4>
+							<select class="selectpicker sp2 tp" id='chose-text-generation-mode'>
+								<option>Json [OpenAi format]</option>
+								<option>Json [raw]</option>
+								<option>XML</option>
+								<option>Pickle</option>
+							</select>
+							
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green tp" id='create-btn'>
+								<i data-feather="save"></i>
+								<p>Export</p>
+							</button>
+						</div>
+					</div>
+					
+					<div class='center top10'>
+						<div class='d-inline-block'>
+							<h4 class='low_text6 tp'>Similarity</h4>
+							<h4 class='low_text6 tp'>93.5%</h4>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class='main-block content-block-image-generation relative' hidden>
+					<div class="flex-row full-w w100 tp">
+						<div class='w65'>
+							<div class='flex-row full-w w100 tp'>
+								<div class='w65'>
+									<h4 class='low_text7 tp'>Prompt:</h4>
+									<textarea class='form-control black-form no-resize' rows="4"></textarea>
+								</div>
+								<div class='w30'>
+									<h4 class='low_text7 tp'>Drop image (optional):</h4>
+									<form id="file-upload-form" class="uploader">
+										<div id="drop-area" class="drop-area">
+											<p>Drag and drop an image here or click</p>
+											<input type="file" id="fileElem" accept="image/*" multiple style="display:none">
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class='w80 flex-row w100 tp'>
+								<div class='w65'>
+									<div class='img_block'>
+										<img src='imgs/image_placeholder_e2.png' class='w100'></img>
+									</div>
+								</div>
+								<div class='w20'>
+									<div class='img_block-lite'>
+										<img src='imgs/image_placeholder_e2.png' class='w100'></img>
+									</div>
+									<div class='img_block-lite'>
+										<img src='imgs/image_placeholder_e2.png' class='w100'></img>
+									</div>
+									<div class='img_block-lite'>
+										<img src='imgs/image_placeholder_e2.png' class='w100'></img>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='w20 border-solid-opensource'>
+							<h4 class='low_text7 tp'>Model:</h4>
+							<select class="selectpicker sp2 tp" id='chose-text-generation-mode'>
+								<option>Stable Diffusion 1.5</option>
+								<option>Stable Diffusion XL</option>
+								<option>Dall-e 3 [API]</option>
+							</select>
+							<h4 class='low_text7 tp'>Mode:</h4>
+							<select class="selectpicker sp2 tp" id='chose-text-generation-mode'>
+								<option>Text to Image</option>
+								<option>Image to Image (Mask)</option>
+								<option>Image to Image (Varians)</option>
+								<option>Image to Text (Vision)</option>
+							</select>
+							
+							<h4 class='low_text7 tp'>Width</h4>
+							<input class='form-control black-form' type='number' value='512' min='64' max='2048' step='8'></input>
+							<h4 class='low_text7 tp'>Height</h4>
+							<input class='form-control black-form' type='number' value='512' min='64' max='2048' step='8'></input>
+							<h4 class='low_text7 tp'>Sampling steps</h4>
+							<input class='form-control black-form' type='number' value='20' min='1' max='150' step='1'></input>
+							<h4 class='low_text7 tp'>CFG Scale</h4>
+							<input class='form-control black-form' type='number' value='7.5' min='1' max='30' step='0.1'></input>
+							<h4 class='low_text7 tp'>Seed</h4>
+							<input class='form-control black-form' type='number' value='-1' step='1'></input>
+
+							
+							
+							
+							<button type="button" tabindex="0" class="btn btn-sm btn-primary flex-btn-green tp" id='create-btn'>
+								<i data-feather="image"></i>
+								<p>Generate</p>
+							</button>
 						</div>
 					</div>
 				</div>
+				
+				<div class='main-block content-block-text-to-speech relative' hidden>
+					text to speech
+				</div>
+				
+				<div class='main-block content-block-speech-to-text relative' hidden>
+					speech to text
+				</div>
+				
+				<div class='main-block content-block-moderation relative' hidden>
+					moderation
+				</div>
+				
 			</div>
 		</div>
 	</div>
 	<script src="scripts/core/index.js"></script>
+	<script src="scripts/core/image_drop.js"></script>
+	
 	<script src="scripts/markdown/marked.min.js"></script>
 	<script src="scripts/markdown/highlight.js"></script>
 	<script src="scripts/icons/feather.min.js"></script>
